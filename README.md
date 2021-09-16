@@ -1,7 +1,7 @@
 # Laravel Cheatsheet:
 
 
-# Important Commands:
+# 1) Important Commands:
 
 <b>
 
@@ -22,5 +22,26 @@ php artisan serve
 
 
 
+# 2) Routing:
+
+
+
+<b>
+
+routes/web.php
+
+```php
+// Return String Response
+Route::get('/hi', function () {
+    return "Wassup!";
+});
+
+// Return json Response
+Route::get('/hi/json', function () {
+    return ["message"=>"Wassup"];
+});
+```
+
+</b>
 
 
