@@ -147,9 +147,6 @@ Route::get('/products/', function () {
 <h1>{{ $heading }}:</h1>
 ```
 
-
-
-
 </b>
 
 
@@ -158,6 +155,46 @@ Route::get('/products/', function () {
 
 
 
+# 4) Using PHP in php files:
+
+You can just use PHP like normal php files.
+
+
+
+<b>
+
+`routes/web.php`
+
+```php
+// Render Blade PHP Response
+Route::get('/products/', function () {
+    $page_inputs = 
+    [
+    	"title"=>"Products List",
+    	"heading"=>"All Products"
+    ];
+    return view("products_list",$page_inputs);
+});
+```
+
+
+
+
+
+`resources/views/products_list.blade.php`
+
+
+```php
+<h1><?php echo $heading; ?>:</h1>
+```
+
+This is equivalent to:
+
+```php
+<h1>{{ echo $heading; }}:</h1>
+```
+
+</b>
 
 
 
