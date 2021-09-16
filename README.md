@@ -112,11 +112,45 @@ Route::get('/products/', function () {
 # 3) Blade Syntax:
 
 
+## 3-a) Passing Variables:
+
+
+
+<b>
+
+`routes/web.php`
+
+```php
+// Render Blade PHP Response
+Route::get('/products/', function () {
+    $page_inputs = 
+    [
+    	"title"=>"Products List",
+    	"heading"=>"All Products"
+    ];
+    return view("products_list",$page_inputs);
+});
+```
 
 
 
 
 
+`resources/views/products_list.blade.php`
+
+
+```html
+<head>
+	<title>{{ $title }}</title>
+</head>
+...
+<h1>{{ $heading }}:</h1>
+```
+
+
+
+
+</b>
 
 
 
