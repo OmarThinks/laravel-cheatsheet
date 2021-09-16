@@ -1,6 +1,16 @@
 # Laravel Cheatsheet:
 
 
+
+# References:
+
+
+1. Net Ninja Laravel Tutotial Play list:  
+https://www.youtube.com/watch?v=zckH4xalOns&list=PL4cUxeGkcC9hL6aCFKyagrT1RCfVN4w2Q&index=1
+
+2. Laravel Documentation: https://laravel.com/docs/
+
+
 # 1) Important Commands:
 
 <b>
@@ -46,7 +56,7 @@ Route::get('/hi/json', function () {
 
 
 
-## 2-b) Render blade.php files:
+## 2-b) Render Template blade.php files:
 
 
 Create this file:  
@@ -92,4 +102,36 @@ Route::get('/hello/', function () {
 
 
 </b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
