@@ -111,12 +111,28 @@ Route::get('/products/', function () {
 
 # 3) Blade Syntax:
 
-
-## 3-a) Passing Variables:
-
-
-
 <b>
+
+
+## 3-a) Using PHP:
+
+
+`resources/views/products_list.blade.php`
+```php
+<p>
+@php
+	echo "This is php using Blade";
+@endphp
+</p>
+```
+
+
+
+
+## 3-b) Passing Variables:
+
+
+
 
 `routes/web.php`
 
@@ -126,7 +142,8 @@ Route::get('/products/', function () {
     $page_inputs = 
     [
     	"title"=>"Products List",
-    	"heading"=>"All Products"
+    	"heading"=>"All Products",
+    	"just_a_number"=>1
     ];
     return view("products_list",$page_inputs);
 });
@@ -139,13 +156,39 @@ Route::get('/products/', function () {
 `resources/views/products_list.blade.php`
 
 
-```html
+```php
 <head>
 	<title>{{ $title }}</title>
 </head>
 ...
 <h1>{{ $heading }}:</h1>
 ```
+
+
+
+## 3-c) Conditionals:
+
+
+
+
+`resources/views/products_list.blade.php`
+
+
+```php
+@if($just_a_number>1)
+	<p>Blade just_a_number is more than 1</p>
+@elseif($just_a_number<1)
+	<p>Blade just_a_number is less than 1</p>
+@else
+	<p>Blade just_a_number is equal to 1</p>
+@endif
+```
+
+
+
+
+
+
 
 </b>
 
