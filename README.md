@@ -186,11 +186,13 @@ Route::get('/products/', function () {
 
 
 
-
-
-
-
 </b>
+
+
+
+
+## 3-d) Loops:
+
 
 
 
