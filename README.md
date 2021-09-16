@@ -16,7 +16,7 @@ cd <application name>
 php artisan serve
 ```
 
-<b>
+</b>
 
 
 
@@ -24,11 +24,11 @@ php artisan serve
 
 # 2) Routing:
 
-
+## 2-a) Return Text or JSON:
 
 <b>
 
-routes/web.php
+`routes/web.php`
 
 ```php
 // Return String Response
@@ -44,4 +44,52 @@ Route::get('/hi/json', function () {
 
 </b>
 
+
+
+## 2-b) Render blade.php files:
+
+
+Create this file:  
+
+<b>
+
+`resources/views/hello_world.blade.php`
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello, World!</title>
+</head>
+<body>
+
+<h1>Hello. World!</h1>
+
+<p>
+Hey!<br>
+Wassup?!
+</p>
+
+</body>
+</html>
+```
+
+
+
+
+
+`routes/web.php`
+
+```php
+// Render Blade PHP Response
+Route::get('/hello/', function () {
+    return view("hello_world");
+});
+```
+
+
+
+
+</b>
 
