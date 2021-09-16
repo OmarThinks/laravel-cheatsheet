@@ -186,7 +186,6 @@ Route::get('/products/', function () {
 
 
 
-</b>
 
 
 
@@ -194,6 +193,60 @@ Route::get('/products/', function () {
 ## 3-d) Loops:
 
 
+
+
+
+
+
+
+
+`routes/web.php`
+
+```php
+// Render Blade PHP Response
+Route::get('/products/', function () {
+    $products =[
+		["name"=>"Labtop","price"=>"50"],
+		["name"=>"Mobile","price"=>"20"],
+		["name"=>"Desktop","price"=>"100"],
+		["name"=>"Table","price"=>"30"],
+	];
+    $page_inputs = 
+    [
+    	"products"=>$products
+    	...
+    ];
+    return view("products_list",$page_inputs);
+});
+```
+
+
+
+
+
+
+`resources/views/products_list.blade.php`
+
+
+```php
+@foreach($products as $key=>$product)
+
+<tr> <th>{{ $key }}</th> 
+	<td>{{ $product["name"] }} </td> 
+<td>${{$product["price"]}}</td>
+
+@endforeach
+```
+
+
+
+
+
+
+
+
+
+</b>
 
 
 
