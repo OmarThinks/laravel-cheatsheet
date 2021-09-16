@@ -63,23 +63,25 @@ Create this file:
 
 <b>
 
-`resources/views/hello_world.blade.php`
+`resources/views/products_list.blade.php`
 
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello, World!</title>
+	<title>Products List</title>
 </head>
 <body>
 
-<h1>Hello. World!</h1>
+<h1>Products list</h1>
 
-<p>
-Hey!<br>
-Wassup?!
-</p>
+<ol>
+	<li>Products 1</li>
+	<li>Products 2</li>
+	<li>Products 3</li>
+</ol>
+
 
 </body>
 </html>
@@ -93,15 +95,28 @@ Wassup?!
 
 ```php
 // Render Blade PHP Response
-Route::get('/hello/', function () {
-    return view("hello_world");
+Route::get('/products/', function () {
+    return view("products_list");
 });
 ```
 
 
-
-
 </b>
+
+
+
+
+
+
+
+# 3) Blade Syntax:
+
+
+
+
+
+
+
 
 
 
