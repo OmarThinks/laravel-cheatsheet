@@ -458,3 +458,23 @@ Logs: "Unknown"
 
 
 
+
+
+# 8) URL Parameters:
+
+
+
+
+<b>
+
+```php
+use Illuminate\Http\Request;
+
+Route::get('/products/{id}', function ($id) {
+    # Now the id is passed
+    # We can use it inside the route
+    ...
+});
+```
+
+</b>
