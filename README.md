@@ -427,8 +427,34 @@ table, th, td{
 
 
 
+# 6) Query Parameters:
 
 
+<b>
+
+```php
+use Illuminate\Http\Request;
+
+Route::get('/', function (Request $request) {
+    $name = $request->query("name", 'Unknown');
+    # "Unknown" is a fallback value
+    error_log($name);
+    ...
+});
+```
+
+
+http://127.0.0.1:8000/products/?name=Ninja  
+
+Logs: "Ninja"  
+
+http://127.0.0.1:8000/products/ 
+
+Logs: "Unknown"
+
+
+
+</b>
 
 
 
