@@ -196,10 +196,6 @@ Route::get('/products/', function () {
 
 
 
-
-
-
-
 `routes/web.php`
 
 ```php
@@ -246,7 +242,78 @@ Route::get('/products/', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 3-e) Layouts:
+
+
+
+
+
+
+
+
+`resources/views/layouts/layout.blade.php`
+
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ $title }}</title>
+</head>
+<body>
+
+@yield("content")
+
+</body>
+</html>
+```
+
+
+
+
+`resources/views/home.blade.php`
+
+
+```php
+@extends("layouts.layout")
+
+@section("content")
+
+<p>This is Home</p>
+
+@endsection
+```
+
+
+
+
+
 </b>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
