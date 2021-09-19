@@ -370,10 +370,41 @@ This is equivalent to:
 
 
 
+# 5) Public Resources:
+
+
+**Public Resouces** exist on the **root url**.
+
+
+<b>
+
+
+`public/css/main.css`
+
+
+```css
+table, th, td{
+    border-collapse: collapse;
+    border:solid 1px black;
+    padding: 3px;
+}
+```
 
 
 
 
+
+`resources/views/layouts/layout.blade.php`
+
+
+```php
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+```
+
+
+
+
+</b>
 
 
 
