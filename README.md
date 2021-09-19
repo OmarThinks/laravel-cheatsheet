@@ -549,3 +549,60 @@ Route::get('/products/{id}', [ProductsController::class, 'show']);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+# 8) Connecting to MySQL:
+
+- Open Xampp
+- Turn on `Apache` and `MySQL`
+- Go to this link : http://localhost/phpmyadmin/
+- Create a database, let's call it `products_db`
+- Inside **`.env`** modify these environemnt variables:
+
+<b>
+
+```
+DB_DATABASE=products_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+</b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
