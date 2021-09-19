@@ -26,7 +26,22 @@ cd <application name>
 php artisan serve
 ```
 
+
+
+
+```bash
+error_log("Hello, World!"); #To print to the console
+```
+
+
+
+
+
+
 </b>
+
+
+
 
 
 
@@ -373,7 +388,7 @@ This is equivalent to:
 # 5) Public Resources:
 
 
-**Public Resouces** exist on the **root url**.
+**Public Resources** exist on the **root url**.
 
 
 <b>
