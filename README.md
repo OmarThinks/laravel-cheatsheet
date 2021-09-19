@@ -24,6 +24,8 @@ php --version
 composer create-project laravel/laravel <application name>
 cd <application name>
 php artisan serve
+
+php artisan make:controller <Controller Name> # in "app/HTTP/Controllers"
 ```
 
 
@@ -427,8 +429,9 @@ table, th, td{
 
 
 
-# 6) Query Parameters:
+# 6) Inputs:
 
+## 6-a) Query Prameters:
 
 <b>
 
@@ -460,7 +463,7 @@ Logs: "Unknown"
 
 
 
-# 8) URL Parameters:
+## 6-b) URL Parameters:
 
 
 
@@ -478,3 +481,71 @@ Route::get('/products/{id}', function ($id) {
 ```
 
 </b>
+
+
+
+
+
+
+
+
+
+
+
+
+# 7) Controllers:
+
+<b>
+
+```bash
+php artisan make:controller <Controller Name> # in "app/HTTP/Controllers"
+```
+
+
+```bash
+php artisan make:controller ProductsController # in "app/HTTP/Controllers"
+```
+
+
+`app/HTTP/Controllers/ProductsController`
+```php
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ProductsController extends Controller
+{
+    # This is now called index action
+    # Index is just a naming convention
+    public function index(Request $request)
+    {return view("products_list");}
+
+    # show is also a naming convention
+    # used for displaying specific item with id
+    public function show($id)
+    {return view("products_details",["id"=>$id]);}
+}
+```
+
+
+
+
+
+
+`routes/web.php`
+
+```php
+use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\ProductsController;
+
+Route::get('/products/', [ProductsController::class, 'index']);
+Route::get('/products/{id}', [ProductsController::class, 'show']);
+```
+
+
+</b>
+
+
+
