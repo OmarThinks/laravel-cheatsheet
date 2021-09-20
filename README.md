@@ -38,6 +38,9 @@ php artisan migrate:refresh      #Reset and re-run all migrations
 php artisan migrate:reset        #Rollback all database migrations
 php artisan migrate:rollback     #Rollback the last database migration
 php artisan migrate:status       #Show the status of each migration
+
+# Models
+php artisan make:model Product # "app/models/Product.php"
 ```
 
 
@@ -735,6 +738,20 @@ class AddPriceToProductsTable extends Migration
 
 
 
+
+
+
+# 10) Eloquent ORM:
+
+<b>
+
+
+```bash
+php artisan make:model <model_name>
+php artisan make:model Product # "app/models/Product.php"
+```
+
+</b>
 
 
 
