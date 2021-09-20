@@ -741,7 +741,80 @@ class AddPriceToProductsTable extends Migration
 
 
 
-# 10) Eloquent ORM:
+
+# 10) Naming Conventions:
+
+
+<table>
+    <tr>
+        <th>Method</th>
+        <th>url</th>
+        <th>Action</th>
+        <th>Route Name</th>
+    </tr>
+
+
+
+<tr>
+        <td>GET</td>
+        <td>/products</td>
+        <td>index</td>
+        <td>products.index</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>/products/create</td>
+        <td>create</td>
+        <td>products.create</td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>/products</td>
+        <td>store</td>
+        <td>products.store</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>/products/{id}</td>
+        <td>show</td>
+        <td>products.show</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>/products/{id}/edit</td>
+        <td>edit</td>
+        <td>products.edit</td>
+    </tr>
+    <tr>
+        <td>PUT/PATCH</td>
+        <td>/products/{id}</td>
+        <td>update</td>
+        <td>products.update</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>/products/{id}</td>
+        <td>destroy</td>
+        <td>products.destroy</td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 11) Eloquent ORM:
 
 <b>
 
@@ -761,19 +834,6 @@ $products=Product::all(); # get all products
 
 
 </b>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
