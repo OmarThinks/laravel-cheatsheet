@@ -26,6 +26,7 @@ cd <application name>
 php artisan serve
 
 php artisan make:controller <Controller Name> # in "app/HTTP/Controllers"
+php artisan make:migration create_<table_name>_table # in "database/migrations"
 ```
 
 
@@ -582,6 +583,65 @@ DB_PASSWORD=
 
 
 
+
+
+# 9) Migrations:
+
+Documentation: https://laravel.com/docs/8.x/migrations  
+
+<b>
+
+
+```bash
+php artisan make_migration create_<table_name>_table
+php artisan make_migration create_products_table
+```
+
+
+Now, This is created:  
+
+`databse/migrations/create_products_table.php`
+
+```php
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateProductsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('products');
+    }
+}
+
+```
+
+
+
+
+
+</b>
 
 
 
