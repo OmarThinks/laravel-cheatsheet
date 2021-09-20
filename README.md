@@ -660,7 +660,7 @@ $table->id();
 $table->timestamps();
 $table->string('name',255);
 $table->string('description',2000);
-$table->float('price');
+#$table->float('price');
 ```
 
 
@@ -690,6 +690,45 @@ php artisan make:migration add_<field_name>_to_<table_name>_table # in "database
 
 php artisan make:migration add_price_to_products_table # in "database/migrations
 ```
+
+
+`databse/migrations/add_price_to_products_table.php`
+
+```php
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddPriceToProductsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('products', function (Blueprint $table) {
+            $table->float('price');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('price');
+        });
+    }
+}
+```
+
 
 
 </b>
