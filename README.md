@@ -41,6 +41,12 @@ php artisan migrate:status       #Show the status of each migration
 
 # Models
 php artisan make:model Product # "app/models/Product.php"
+
+# Authentication
+composer require laravel/ui
+php artisan ui vue --auth
+npm install
+npm run dev
 ```
 
 
@@ -870,7 +876,20 @@ $products=Product::all(); # get all products
 
 
 
+# 12) Authentication:
 
+<b>
+
+```bash
+composer require laravel/ui
+php artisan ui vue --auth
+npm install
+npm run dev
+```
+
+
+
+</b>
 
 
 
