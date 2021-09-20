@@ -30,6 +30,8 @@ php artisan make:controller <Controller Name> # in "app/HTTP/Controllers"
 
 # Migrations
 php artisan make:migration create_<table_name>_table # in "database/migrations"
+php artisan make:migration add_<field_name>_to_<table_name>_table # in "database/migrations"
+
 php artisan migrate # migrate the new migrations
 php artisan migrate:fresh        #Drop all tables and re-run all migrations
 php artisan migrate:refresh      #Reset and re-run all migrations
@@ -679,6 +681,14 @@ php artisan migrate:refresh      #Reset and re-run all migrations
 php artisan migrate:reset        #Rollback all database migrations
 php artisan migrate:rollback     #Rollback the last database migration
 php artisan migrate:status       #Show the status of each migration
+```
+
+
+
+```bash
+php artisan make:migration add_<field_name>_to_<table_name>_table # in "database/migrations
+
+php artisan make:migration add_price_to_products_table # in "database/migrations
 ```
 
 
