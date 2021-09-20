@@ -640,6 +640,22 @@ class CreateProductsTable extends Migration
 
 
 
+I have used this schema:
+
+
+```php
+$table->id();
+$table->timestamps();
+$table->string('name');
+$table->string('description');
+$table->float('price');
+```
+
+
+
+
+
+
 
 </b>
 
