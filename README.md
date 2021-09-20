@@ -446,7 +446,34 @@ table, th, td{
 
 # 6) Inputs:
 
-## 6-a) Query Prameters:
+
+
+
+
+## 6-a) URL Parameters:
+
+
+
+
+<b>
+
+```php
+use Illuminate\Http\Request;
+
+Route::get('/products/{id}', function ($id) {
+    # Now the id is passed
+    # We can use it inside the route
+    ...
+});
+```
+
+</b>
+
+
+
+
+
+## 6-b) Query Prameters:
 
 <b>
 
@@ -478,7 +505,12 @@ Logs: "Unknown"
 
 
 
-## 6-b) URL Parameters:
+
+
+
+
+
+## 6-c) Request Body:
 
 
 
@@ -488,9 +520,10 @@ Logs: "Unknown"
 ```php
 use Illuminate\Http\Request;
 
-Route::get('/products/{id}', function ($id) {
-    # Now the id is passed
-    # We can use it inside the route
+Route::get('/', function (Request $request) {
+    $name = $request->input("name", 'Unknown');
+    # "Unknown" is a fallback value
+    error_log($name);
     ...
 });
 ```
