@@ -25,8 +25,13 @@ composer create-project laravel/laravel <application name>
 cd <application name>
 php artisan serve
 
+# Controllers
 php artisan make:controller <Controller Name> # in "app/HTTP/Controllers"
+
+# Migrations
 php artisan make:migration create_<table_name>_table # in "database/migrations"
+php artisan migrate # migrate the new migrations
+php artisan migrate:fresh # drops all the databses and migrate from scratch
 ```
 
 
@@ -646,12 +651,21 @@ I have used this schema:
 ```php
 $table->id();
 $table->timestamps();
-$table->string('name');
-$table->string('description');
+$table->string('name',255);
+$table->string('description',2000);
 $table->float('price');
 ```
 
 
+
+
+Now run this command:
+
+
+```bash
+php artisan migrate # migrate the new migrations
+php artisan migrate:fresh # drops all the databses and migrate from scratch
+```
 
 
 
