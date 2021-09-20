@@ -751,6 +751,15 @@ php artisan make:model <model_name>
 php artisan make:model Product # "app/models/Product.php"
 ```
 
+
+
+```php
+use App\Models\Product;
+$products=Product::all(); # get all products
+```
+
+
+
 </b>
 
 
