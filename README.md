@@ -44,7 +44,7 @@ php artisan make:model Product # "app/models/Product.php"
 
 # Authentication
 composer require laravel/ui
-php artisan ui vue --auth
+php artisan ui bootstrap --auth
 npm install
 npm run dev
 ```
@@ -882,11 +882,22 @@ $products=Product::all(); # get all products
 
 ```bash
 composer require laravel/ui
-php artisan ui vue --auth
+php artisan ui bootstrap --auth
 npm install
 npm run dev
 ```
 
+
+
+Now a new layout has been generated.  
+You can modify which layout is used on each view.
+
+`web.php`
+```php
+Route::post('/products/', [ProductsController::class, 'store'])->middleware("auth");
+```
+This endpoint is now protected with auth.  
+The user must be logged in to continue.
 
 
 </b>
