@@ -31,7 +31,11 @@ php artisan make:controller <Controller Name> # in "app/HTTP/Controllers"
 # Migrations
 php artisan make:migration create_<table_name>_table # in "database/migrations"
 php artisan migrate # migrate the new migrations
-php artisan migrate:fresh # drops all the databses and migrate from scratch
+php artisan migrate:fresh        #Drop all tables and re-run all migrations
+php artisan migrate:refresh      #Reset and re-run all migrations
+php artisan migrate:reset        #Rollback all database migrations
+php artisan migrate:rollback     #Rollback the last database migration
+php artisan migrate:status       #Show the status of each migration
 ```
 
 
@@ -593,6 +597,7 @@ DB_PASSWORD=
 # 9) Migrations:
 
 Documentation: https://laravel.com/docs/8.x/migrations  
+Column Types: https://laravel.com/docs/8.x/migrations#available-column-types  
 
 <b>
 
@@ -668,7 +673,13 @@ php artisan migrate:fresh # drops all the databses and migrate from scratch
 ```
 
 
-
+```bash
+php artisan migrate:fresh        #Drop all tables and re-run all migrations
+php artisan migrate:refresh      #Reset and re-run all migrations
+php artisan migrate:reset        #Rollback all database migrations
+php artisan migrate:rollback     #Rollback the last database migration
+php artisan migrate:status       #Show the status of each migration
+```
 
 
 </b>
